@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>테스트 페이지</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+  </div>
+
+  <script>
+    const box1 = document.getElementById('box1');
+    const box2 = document.getElementById('box2');
+    const box3 = document.getElementById('box3');
+
+    // 1번 클릭 → 콘솔 출력
+    box1.addEventListener('click', () => {
+      console.log('클릭1');
+      alert('클릭1'); // 눈으로 확인용
+    });
+
+    // 2번 클릭 → 분홍색으로 변경
+    box2.addEventListener('click', () => {
+      box2.style.backgroundColor = 'pink';
+    });
+
+    // 3번 클릭 → 2번 다시 초록색
+    box3.addEventListener('click', () => {
+      box2.style.backgroundColor = 'green';
+    });
+  </script>
+
+</body>
+</html>
